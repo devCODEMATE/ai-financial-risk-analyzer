@@ -8,7 +8,7 @@ This project demonstrates how AI systems can evaluate uncertain environments usi
 
 ## 🚀 Live Demo
 
-👉 [View the app](PEGÁ_ACÁ_TU_LINK_DE_GITHUB_PAGES)
+👉 [View the app](https://devcodemate.github.io/ai-financial-risk-analyzer/)
 
 ---
 
