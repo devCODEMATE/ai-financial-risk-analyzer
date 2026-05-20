@@ -1,0 +1,310 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #111827);
+  color: #e5e7eb;
+  padding: 32px 16px;
+}
+
+.dashboard {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.header {
+  background: linear-gradient(135deg, #111827, #1e293b);
+  border: 1px solid #334155;
+  border-radius: 24px;
+  padding: 28px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.badge {
+  display: inline-block;
+  background: #0f766e;
+  color: #ccfbf1;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+}
+
+.header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.market-card {
+  min-width: 220px;
+  background: #020617;
+  border: 1px solid #334155;
+  border-radius: 20px;
+  padding: 20px;
+  display: grid;
+  gap: 8px;
+  align-content: center;
+}
+
+.market-card span {
+  font-size: 2.4rem;
+}
+
+.market-card small {
+  color: #94a3b8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 22px;
+}
+
+.panel {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28);
+}
+
+.panel h2 {
+  margin-bottom: 18px;
+  color: #f8fafc;
+}
+
+.input-panel {
+  grid-row: span 2;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #cbd5e1;
+  font-weight: bold;
+}
+
+select {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  border: 1px solid #475569;
+  background: #020617;
+  color: #f8fafc;
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+button {
+  flex: 1;
+  border: none;
+  border-radius: 12px;
+  padding: 13px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background: #2563eb;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.3);
+}
+
+button.secondary {
+  background: #475569;
+  box-shadow: none;
+}
+
+.concept {
+  display: flex;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #020617;
+  border: 1px solid #334155;
+  margin-bottom: 14px;
+}
+
+.concept span {
+  font-size: 1.7rem;
+}
+
+.concept strong {
+  color: #f8fafc;
+}
+
+.concept p {
+  color: #94a3b8;
+  margin-top: 5px;
+  line-height: 1.45;
+}
+
+.result-panel {
+  min-height: 360px;
+}
+
+.empty-result {
+  background: #020617;
+  color: #94a3b8;
+  border: 1px dashed #475569;
+  border-radius: 18px;
+  padding: 22px;
+}
+
+@media (max-width: 850px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .input-panel {
+    grid-row: auto;
+  }
+}
+
+.risk-card {
+  background: #020617;
+  border: 1px solid #334155;
+  border-radius: 20px;
+  padding: 22px;
+}
+
+.risk-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.risk-label {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.risk-header h3 {
+  font-size: 2rem;
+  margin-top: 4px;
+}
+
+.score-circle {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.low-risk .score-circle {
+  background: #16a34a;
+}
+
+.medium-risk .score-circle {
+  background: #ca8a04;
+}
+
+.high-risk .score-circle {
+  background: #dc2626;
+}
+
+.low-risk {
+  border-left: 6px solid #16a34a;
+}
+
+.medium-risk {
+  border-left: 6px solid #ca8a04;
+}
+
+.high-risk {
+  border-left: 6px solid #dc2626;
+}
+
+.meter {
+  width: 100%;
+  height: 14px;
+  background: #1e293b;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #eab308, #ef4444);
+  border-radius: 999px;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.metrics div {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.metrics span {
+  display: block;
+  color: #94a3b8;
+  margin-bottom: 6px;
+}
+
+.metrics strong {
+  font-size: 1.3rem;
+}
+
+.risk-card h4 {
+  margin-top: 18px;
+  margin-bottom: 10px;
+  color: #f8fafc;
+}
+
+.risk-card ul {
+  padding-left: 20px;
+  color: #cbd5e1;
+}
+
+.risk-card li {
+  margin-bottom: 8px;
+}
+
+.risk-card p {
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.note {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  color: #94a3b8 !important;
+  border-top: 1px solid #334155;
+  padding-top: 14px;
+}

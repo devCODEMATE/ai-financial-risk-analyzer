@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Financial Risk Analyzer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="dashboard">
+    <header class="header">
+      <div>
+        <span class="badge">Module 8 · Uncertainty</span>
+        <h1>AI Financial Risk Analyzer</h1>
+        <p>
+          A simplified AI decision-making demo for analyzing financial risk under uncertainty.
+        </p>
+      </div>
+
+      <div class="market-card">
+        <span>📈</span>
+        <strong>Risk Intelligence</strong>
+        <small>probabilistic reasoning demo</small>
+      </div>
+    </header>
+
+    <section class="grid">
+      <aside class="panel input-panel">
+        <h2>Market Inputs</h2>
+
+        <label for="volatility">Market Volatility</label>
+        <select id="volatility">
+          <option value="">Select volatility</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <label for="inflation">Inflation Level</label>
+        <select id="inflation">
+          <option value="">Select inflation</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <label for="investment">Investment Type</label>
+        <select id="investment">
+          <option value="">Select investment</option>
+          <option value="bonds">Bonds</option>
+          <option value="stocks">Stocks</option>
+          <option value="crypto">Crypto</option>
+        </select>
+
+        <label for="cash">Cash Reserve</label>
+        <select id="cash">
+          <option value="">Select reserve level</option>
+          <option value="strong">Strong</option>
+          <option value="moderate">Moderate</option>
+          <option value="weak">Weak</option>
+        </select>
+
+        <div class="buttons">
+          <button id="analyzeBtn">Analyze Risk</button>
+          <button id="resetBtn" class="secondary">Reset</button>
+        </div>
+      </aside>
+
+      <section class="panel concept-panel">
+        <h2>Uncertainty Concepts</h2>
+
+        <div class="concept">
+          <span>🎲</span>
+          <div>
+            <strong>Uncertain Environment</strong>
+            <p>Market conditions can change and outcomes are not fully predictable.</p>
+          </div>
+        </div>
+
+        <div class="concept">
+          <span>🧠</span>
+          <div>
+            <strong>Probabilistic Reasoning</strong>
+            <p>The system estimates risk instead of giving a guaranteed answer.</p>
+          </div>
+        </div>
+
+        <div class="concept">
+          <span>⚖️</span>
+          <div>
+            <strong>Decision-Making</strong>
+            <p>The output suggests a strategy based on risk signals.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel result-panel">
+        <h2>Risk Analysis</h2>
+
+        <div id="result" class="empty-result">
+          Select market conditions and run the analyzer.
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
